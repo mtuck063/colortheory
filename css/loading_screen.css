@@ -1,0 +1,32 @@
+#loading-screen {
+  height: 100vh;
+  width: 100vw;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#loading-screen .loader {
+  height: 70px;
+  width: 500px;
+  position: absolute;
+  top: calc(50vh - 35px);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  max-width: 70vw;
+  background-color: #d7c2d8;
+  filter: saturate(2.5) hue-rotate(0deg);
+  animation: hue-rotation 3s linear 0s infinite alternate;
+}
+
+#loading-screen .loader .no-animation {
+  animation: none;
+}
+
+@keyframes hue-rotation {
+  0%   { filter: saturate(2.5) hue-rotate(0deg); }
+  100% { filter: saturate(5) hue-rotate(360deg); }
+}

@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik+Mono+One');
+@import 'base/colorswatches';
+
+#landing-animation {
+  width: 100vw;
+  height: 100vh;
+}
+
+.landing-animation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+	width: 100vw;
+	height: 100vh;
+  background: linear-gradient(to bottom, $chatelle-color 0%, $chatelle-color 20%, $white-color 100%);
+
+  h1 {
+    text-align: center;
+    cursor: default;
+    font-family: 'Rubik Mono One', sans-serif;
+    color: $white-color;
+    transition: 200ms;
+    z-index: 1;
+    font-weight: 300;
+  }
+
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 20px;
+  }
+}

@@ -1,0 +1,30 @@
+@import 'base/colorswatches';
+@import 'base/variables';
+
+.saturation-container {
+
+  canvas {
+    filter: saturate(1);
+  }
+
+  .box {
+    height: 125px;
+    line-height: 125px;
+    width: 140px;
+    text-align: center;
+    color: $white-color;
+    background-color: $atomic-tangerine-color;
+    font-size: 18px;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-bottom: 25px;
+
+    &.saturated {
+      background-color: #ff5100;
+    }
+
+    &.desaturated {
+      background-color: #bca79d;
+    }
+  }
+}

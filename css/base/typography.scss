@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:300,300i,400,400i,700,700i');
+
+* {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-size: $xlg-header-font;
+
+  @media #{$small-and-down} {
+    font-size: $lg-header-font;
+  }
+}
+
+h2 {
+  font-size: $lg-header-font;
+
+  @media #{$small-and-down} {
+    font-size: $med-header-font;
+  }
+}
+
+h3 {
+  font-size: $sm-header-font;
+
+  @media #{$small-and-down} {
+    font-size: $xsm-header-font;
+  }
+}
+
+h4 {
+  font-size: $xsm-header-font;
+
+  @media #{$small-and-down} {
+    font-size: $xxsm-header-font;
+    line-height: $med-header-font !important;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+  margin: 0;
+}
+
+/* Font Size */
+
+.sm-text {
+  font-size: $sm-font;
+}
+
+.med-text {
+  font-size: $med-font;
+}
+
+.lg-text {
+  font-size: $lg-font;
+}
+
+.xlg-text {
+  font-size: $xlg-font;
+}
+
+/* Font Styling */
+
+.italic {
+  font-style: italic;
+}
+
+/* Font Weight */
+
+.bold {
+  font-weight: 700;
+}
+
+.med-bold {
+  font-weight: 500;
+}
+
+.regular {
+  font-weight: 400;
+}
+
+.thin {
+  font-weight: 300;
+}
+
+/* Text Color */
+
+.chatelle-color {
+  color: $chatelle-color;
+}
+
+.camelot-color {
+  color: $camelot-color;
+}
+
+.viola-color {
+  color: $viola-color;
+}
+
+.atomic-tangerine-color {
+  color: $atomic-tangerine-color;
+}
+
+.mona-lisa-color {
+  color: $mona-lisa-color;
+}
+
+.light-mona-lisa-color {
+  color: $light-mona-lisa-color;
+}
+
+.mandy-color {
+  color: $mandy-color;
+}
+
+.wewak-color {
+  color: $wewak-color;
+}
+
+.perfume-color {
+  color: $perfume-color;
+}
+
+.white-color {
+  color: $white-color;
+}
+
+/* Line height */
+
+@for $i from 1 through 20 {
+
+  .line-height-#{$i * 5} {
+    line-height: #{$i * 5}px;
+  }
+
+}

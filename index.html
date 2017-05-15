@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+  <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1'>
+
+  <meta property='og:description' content='Brief introduction to color theory.'>
+  <meta property='og:image' name='thumb' content='http://colortheory.ca/images/og.png'>
+  <meta property='og:title' content='Color Theory'>
+  <meta property='og:type' content='website'>
+  <meta property='og:url' content='http://colortheory.ca'>
+  <meta property='og:site_name' content='Color Theory'>
+
+  <meta name='twitter:card' content='summary_large_image'>
+  <meta name='twitter:site' content='http://colortheory.ca'>
+  <meta name='twitter:creator' content='@MenelikTucker'>
+  <meta name='twitter:title' content='Color Theory'>
+  <meta name='twitter:description' content='Brief introduction to color theory.'>
+  <meta name='twitter:image:src' content='http://colortheory.ca/images/og.png'>
+
+  <title>Color Theory</title>
+  <meta name='description' content='Brief introduction to color theory.'>
+
+  <link rel='stylesheet' href='./css/loading_screen.css'>
+</head>
+<body>
+  <section id='landing-animation'></section>
+  <section id='loading-screen'><div class='loader'></div></section>
+  <section id='hue'></section>
+  <section id='saturation'></section>
+  <section id='value'></section>
+  <section id='verbs'></section>
+  <script src='./bundle.js'></script>
+  <script type='text/javascript'>
+  document.addEventListener('DOMContentLoaded', function() {
+    var loader = document.querySelector('.loader');
+    var loaderContainer = document.querySelector('#loading-screen');
+
+    TweenMax.to(loader, 1, {
+      delay: 1,
+      animation: 'none',
+      filter: 'saturate(1)',
+      top: 0,
+      width: '100vw',
+      'max-width': '100vw',
+      ease: Power4.easeOut,
+      onComplete: function() {
+        window.scrollTo(0,0);
+        TweenMax.set(loaderContainer, { position: 'relative' });
+        loaderContainer.removeChild(loader);
+        window.dispatchEvent(new CustomEvent('custom:page-load', { detail: loaderContainer }));
+      }
+     });
+  });
+  </script>
+</body>
+</html>
